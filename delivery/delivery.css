@@ -1,0 +1,155 @@
+/* TABLE STYLING */
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE TABLE */
+@media screen and (max-width: 600px) {
+  #map-container {
+    height: 200px;
+  }
+  table {
+    border: 0;
+  }
+  .table-container {
+    margin: 10px;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* GENERAL STYLING */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+/* MAIN BUTTONS (Take Order) */
+button, input[type="submit"] {
+  font-size: 16px;
+  background: #06C167;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #049b50;
+  transform: translateY(-2px);
+}
+
+/* VIEW ROUTE BUTTON */
+.mini {
+  display: inline-block;
+  border: 2px solid #06C167;
+  color: #06C167;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+.mini:hover {
+  background: #06C167;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* NAV STYLE LINKS */
+a {
+  font-size: 18px;
+  background: #06C167;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.25s;
+}
+
+a:hover {
+  background: #049b50;
+}
+
+/* IMAGE SECTION */
+.itm {
+  display: grid;
+  justify-content: center;
+}
+.itm img {
+  width: 350px;
+  max-width: 90%;
+  border-radius: 10px;
+}

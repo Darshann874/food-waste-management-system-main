@@ -1,0 +1,181 @@
+/* ---------------------------------------------------------
+   SUPER ADMIN – GLASSMORPHIC + ANIMATED DASHBOARD UI
+   --------------------------------------------------------- */
+
+:root {
+  --bg: #eef6f3;
+  --card: rgba(255,255,255,0.55);
+  --card-blur: blur(14px);
+  --text: #0f172a;
+  --accent: #06C167;
+  --muted: #6b7280;
+  --shadow: 0px 8px 30px rgba(0,0,0,0.12);
+}
+
+/* DARK MODE VARIABLES */
+body.dark {
+  --bg: #0b0f14;
+  --text:#e3edf0;
+  --card: rgba(25,32,39,0.55);
+  --shadow: 0px 8px 30px rgba(0,0,0,0.55);
+}
+
+/* GLOBAL */
+body {
+  background: var(--bg);
+  font-family: "Inter", sans-serif;
+  margin:0; padding:0;
+  color: var(--text);
+  transition: background .4s ease, color .4s ease;
+}
+
+.sa-container {
+  padding:20px;
+  animation: fadeIn .8s ease forwards;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+  0% { opacity:0; transform: translateY(20px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+
+/* ------------------------------------------------------------
+   GLASS SIDEBAR
+------------------------------------------------------------ */
+.sa-sidebar {
+  background: rgba(15,59,40,0.55);
+  backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  box-shadow: var(--shadow);
+  transition:.4s;
+}
+
+/* ------------------------------------------------------------
+   GLASS TOPBAR
+------------------------------------------------------------ */
+.sa-topbar {
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  box-shadow: var(--shadow);
+  transition:.4s;
+}
+
+/* ------------------------------------------------------------
+   GLASS CARDS
+------------------------------------------------------------ */
+.sa-card,
+.sa-small-card {
+  background: var(--card);
+  backdrop-filter: var(--card-blur);
+  box-shadow: var(--shadow);
+  border-radius: 16px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,0.35);
+  transition:.35s ease;
+  animation: scaleUp .7s ease forwards;
+}
+
+/* SCALE UP ANIMATION */
+@keyframes scaleUp {
+  0% { opacity:0; transform: scale(0.85); }
+  100% { opacity:1; transform: scale(1); }
+}
+
+/* Hover lift */
+.sa-card:hover,
+.sa-small-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 14px 35px rgba(0,0,0,0.20);
+}
+
+/* NUMBERS inside cards */
+.sa-num {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent);
+  animation: pop .8s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.7); opacity:0; }
+  100% { transform: scale(1); opacity:1; }
+}
+
+/* ------------------------------------------------------------
+   GRID SYSTEM
+------------------------------------------------------------ */
+.sa-grid-4 {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:18px;
+}
+
+.sa-grid-3 {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:18px;
+}
+
+/* ------------------------------------------------------------
+   TABLE – GLASS EFFECT
+------------------------------------------------------------ */
+.sa-table {
+  width:100%;
+  border-collapse: collapse;
+}
+
+.sa-table th,
+.sa-table td {
+  padding:14px;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(6px);
+}
+
+.sa-table tr:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ------------------------------------------------------------
+   BADGES
+------------------------------------------------------------ */
+.badge {
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:700;
+  font-size:12px;
+}
+.badge.green { background:#d9fbe9; color:#065f46; }
+.badge.orange{ background:#ffedd5; color:#b45309; }
+.badge.red   { background:#fee2e2; color:#b91c1c; }
+
+/* ------------------------------------------------------------
+   THEME TOGGLE BUTTON
+------------------------------------------------------------ */
+.theme-toggle {
+  background: var(--accent);
+  padding: 8px 14px;
+  border:none;
+  border-radius:25px;
+  font-weight:600;
+  color:white;
+  transition:.3s ease;
+}
+
+.theme-toggle:hover {
+  background:#049d52;
+  transform: translateY(-2px);
+}
+
+/* CHART CONTAINER ANIMATION */
+canvas {
+  animation: fadeIn .9s ease;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .sa-grid-4 { grid-template-columns: repeat(2,1fr); }
+  .sa-grid-3 { grid-template-columns: repeat(1,1fr); }
+}
+

@@ -1,0 +1,142 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #333;
+    display: flex;
+}
+
+/* SIDEBAR */
+nav {
+    width: 240px;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    padding: 24px 18px;
+    position: fixed;
+}
+
+.logo_name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #06C167;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+/* NAV LINKS */
+nav .nav-links li {
+    list-style: none;
+    margin: 14px 0;
+}
+
+nav .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    transition: .25s;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+    background: #06C167;
+    color: #fff;
+}
+
+nav .nav-links i {
+    font-size: 18px;
+}
+
+/* DASHBOARD WRAPPER */
+.dashboard {
+    margin-left: 260px;
+    padding: 34px 50px;
+    width: 100%;
+}
+
+/* TOP HEADER */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.dash-content .title {
+    margin-top: 32px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* CARDS & TABLES */
+.table-container {
+    margin-top: 24px;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #F4F4F4;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 15px;
+}
+
+tr:hover {
+    background: #F9FFF9;
+}
+
+/* BUTTONS */
+button, .btn {
+    background: #06C167;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+
+button:hover, .btn:hover {
+    background: #05a556;
+}
+
+/* STATUS BADGES */
+.badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.badge.pending { background: #999; }
+.badge.assigned { background: #06C167; }
+.badge.picked_up { background: #2563eb; }
+.badge.delivered { background: #14532d; }
